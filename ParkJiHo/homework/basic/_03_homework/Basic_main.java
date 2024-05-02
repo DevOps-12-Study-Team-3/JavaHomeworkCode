@@ -39,17 +39,13 @@ public class Basic_main {
 		
 		System.out.println( " 사용자의 이름 :  " + user.getUsername() );
 		
-		
 		user.setId( 1000000000L ) ;
 		
 		System.out.println( " 사용자의 아이디 :  " + user.getId() );
 		
-		
-		
 		user.setPassword( "123456789" ) ;
 		
 		System.out.println( " 사용자의 패스워드 :  " + user.getPassword() );
-	
 	
 		System.out.println( "\n=======================\n" );
 		
