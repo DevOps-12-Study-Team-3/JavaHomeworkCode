@@ -4,7 +4,7 @@ public class Cat extends mammal {
 
 	public Cat() {
 		super();
-		System.out.print("- 고양이과 -");
+		System.out.print("- 고양이과 ");
 	}
 	
 	public void eat() {

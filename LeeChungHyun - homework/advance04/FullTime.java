@@ -2,7 +2,7 @@ package chap99_homework.myself04.advance;
 
 public class FullTime extends Worker {
 	
-	int bonus;
+	private int bonus;
 	
 	public FullTime(int eno, String name, int pay, int type) {
 		super(eno, name, pay, type);
@@ -13,7 +13,7 @@ public class FullTime extends Worker {
 	@Override
 	public double getMonthpay() {
 		// TODO Auto-generated method stub
-		return (double)super.pay / 12 + (double) bonus / 12;
+		return (double) super.getPay() / 12 + (double) bonus / 12;
 	}
 	
 	@Override

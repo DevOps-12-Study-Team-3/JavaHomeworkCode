@@ -23,7 +23,7 @@ public class ArrayUtility2 {
 		int checkerCnt = 0;
 		for(int i = 0 ; i < l2 ; i++) {
 			for(int j = 0 ; j < l1 ; j++) {
-				if(s2[i] == s1[j] && checker[j] == false) {
+				if(s2[i] == s1[j] && !checker[j]) {
 					checker[j] = true;
 					checkerCnt ++;
 					break;
@@ -31,13 +31,11 @@ public class ArrayUtility2 {
 			}
 		}
 		int [] removeArr = new int[l1-checkerCnt];
-		int interval = 0;
-		for(int i = 0 ; i < l1-checkerCnt ; i++) {
-			if(checker[i + interval] == false) {
-				removeArr[i] = s1[i + interval];
-			}else {
-				interval++;
-				i--;
+		int index = 0;
+		for(int i = 0 ; i < l1; i++) {
+			if(!checker[i]) {
+				removeArr[index] = s1[i];
+				index++;
 			}
 		}
 		return removeArr;
