@@ -2,7 +2,7 @@ package chap99_homework.myself04.advance;
 
 public class Temporary extends Worker {
 	
-	int hireYear, 월급 = pay / 12;
+	private int hireYear;
 	
 	public Temporary(int eno, String name, int pay, int type) {
 		super(eno, name, pay, type);
@@ -12,7 +12,7 @@ public class Temporary extends Worker {
 	@Override
 	public double getMonthpay() {
 		// TODO Auto-generated method stub
-		return (double) this.pay / 12;
+		return (double) super.getPay() / 12;
 	}
 	
 	@Override
