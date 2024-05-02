@@ -58,8 +58,18 @@ public abstract class Employee {
 		this.type = type;
 	}
 	
+	public String getEmployType() {
+		String employType;
+		if(this.type == 1) employType = "정규직";
+		else if(this.type == 2) employType = "계약직";
+		else employType = "임시직";
+		
+		return employType;
+	}
+	
 	public abstract double getMonthPay();
 	public void showEmployeeInfo() {
-		System.out.println("사번 : " + this.eno + ", 이름 : "+ this.name + ", 급여 : " + this.pay);
+		System.out.println("사번 : " + this.eno + ", 이름 : "+ this.name + ", "
+				+ "급여 : " + this.pay+", 근무형태 : "+getEmployType());
 	}
 }
