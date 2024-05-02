@@ -33,7 +33,13 @@ class Median {
 		
 		int num_list_sort[] = new int [ 3 ] ;
 		
+		int max_mum = 0 ;
+		
+		int min_num = 0 ;
+		
 		int mideel_num = 0 ;
+		
+		int Test_num = 0 ;
 		
 		num_list[ 0 ] = a ; 
 		num_list[ 1 ] = b ; 
@@ -54,51 +60,97 @@ class Median {
 		
 		// 가장 큰 값 빼기
 		
+		Test_num = 0 ;
+		
 		for ( int i = 0 ; i  < num_list.length ; i++ )
 		{
 			
 			if ( i == 0 )
 			{
-				
-				mideel_num = num_list[i] ;
-
+				Test_num = num_list[ i ] ; 
 			}
-			
 			else
 			{
-				if ( mideel_num > num_list[i] )
+				if ( Test_num == num_list[ i ] )
 				{
-					
-					mideel_num = mideel_num ;
-					
+//					System.out.println( "값이 중복됩니다." ) ;
 				}
-				else if (  mideel_num < num_list[i] )
+				else if ( Test_num > num_list[ i ] )
 				{
-					mideel_num = num_list[i] ;
-				}			
+//					System.out.println( "값이 작습니다." );	
+				}
+				else if ( Test_num < num_list[ i ] )
+				{
+//					System.out.println( "값이 더큽니다." );	
 					
-				else if (  mideel_num == num_list[i] )
-				{
-					System.out.println( "서로 값이 같습니다." );
-				}			
+					Test_num = num_list[ i ];
+				}
 			}
-
+			
 		}
+		
+		max_mum = Test_num ;
+		
+		System.out.println( "가장 큰 값 : " + max_mum );
 		
 		System.out.println( "\n=================\n" );
 		
 		
-		// ################################
+		// #################################
 		
-		for(   ; ; )
+		// 가장 큰 값 빼기
+		
+		Test_num = 0 ;
+		
+		for ( int i = 0 ; i < num_list.length ; i++ )
 		{
 			
+			if ( i == 0 )
+			{
+				Test_num = num_list[ i ] ; 
+			}
+			else
+			{
+				if ( Test_num == num_list[ i ] )
+				{
+//					System.out.println( "값이 중복됩니다." ) ;
+				}
+				else if ( Test_num < num_list[ i ] )
+				{
+//					System.out.println( "값이 더큽니다." ) ; 					
+				}
+				else if ( Test_num > num_list[ i ] )
+				{
+					System.out.println( "값이 작습니다." ) ;	
+					
+					Test_num = num_list[ i ];	
+				}
+			}
 		}
 		
+		min_num = Test_num ;
+		
+		System.out.println( "가장 작은 값 : " + min_num ) ;
+		
+		System.out.println( "\n=================\n" ) ;
 		
 		
+		// #################################
 		
-		// ################################
+		// 중앙값 뽑기
+		
+		for ( int i= 0 ; i < num_list.length ; i++ )
+		{
+			if ( ( num_list[i] != min_num ) && ( num_list[i] != max_mum )  )
+			{
+				
+				mideel_num = num_list[i] ;
+			}
+		}
+		
+//		System.out.println(  "중앙 값 : " +  mideel_num );
+		
+		// #################################
 		
 		return mideel_num ;
 	}
