@@ -12,11 +12,11 @@ public class PrintStudentRank {
 		int engStuCnt = 0;
 		int comStuCnt = 0;
 		
-		for(Student student : stArr) {
-			if(student != null) {
-				if(student.getClass().getSimpleName().equals("MathStudent")) mathStuCnt++;
-				else if(student.getClass().getSimpleName().equals("EngStudent")) engStuCnt++;
-				else if(student.getClass().getSimpleName().equals("ComStudent")) comStuCnt++;
+		for(int i = 0; i < index; ++i) {
+			if(stArr[i] != null) {
+				if(stArr[i].getClass().getSimpleName().equals("MathStudent")) mathStuCnt++;
+				else if(stArr[i].getClass().getSimpleName().equals("EngStudent")) engStuCnt++;
+				else if(stArr[i].getClass().getSimpleName().equals("ComStudent")) comStuCnt++;
 				else continue;
 			}
 		}
@@ -29,13 +29,13 @@ public class PrintStudentRank {
 		int engIdx = 0;
 		int comIdx = 0;
 		
-		for(Student student : stArr) {
-			if(student.getClass().getSimpleName().equals("MathStudent"))
-				mathStudentArr[mathIdx++] = (MathStudent)student;
-			else if(student.getClass().getSimpleName().equals("EngStudent")) 
-				engStudentArr[engIdx++] = (EngStudent)student;
-			else if(student.getClass().getSimpleName().equals("ComStudent")) 
-				comStudentArr[comIdx++] = (ComStudent)student;
+		for(int i = 0; i < index; ++i) {
+			if(stArr[i].getClass().getSimpleName().equals("MathStudent"))
+				mathStudentArr[mathIdx++] = (MathStudent)stArr[i];
+			else if(stArr[i].getClass().getSimpleName().equals("EngStudent")) 
+				engStudentArr[engIdx++] = (EngStudent)stArr[i];
+			else if(stArr[i].getClass().getSimpleName().equals("ComStudent")) 
+				comStudentArr[comIdx++] = (ComStudent)stArr[i];
 			else continue;
 		}
 		
@@ -61,7 +61,7 @@ public class PrintStudentRank {
 		for(int i = 0; i < majorRankArr.length; ++i) {
 			for(int j = i + 1; j < majorRankArr.length; ++j) {
 				// 내림차순 정렬
-				if(majorRankArr[i] > majorRankArr[j]) {
+				if(majorRankArr[i] < majorRankArr[j]) {
 					double tempAvg;
 					Student tempStudent;
 					
