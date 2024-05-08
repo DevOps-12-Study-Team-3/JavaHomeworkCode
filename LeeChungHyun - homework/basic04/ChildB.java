@@ -1,5 +1,13 @@
 package chap99_homework.myself04.basic;
 
 public class ChildB extends Parent {
-	String fingerPrint;
+	private String fingerPrint;
+
+	public String getFingerPrint() {
+		return fingerPrint;
+	}
+
+	public void setFingerPrint(String fingerPrint) {
+		this.fingerPrint = fingerPrint;
+	}
 }

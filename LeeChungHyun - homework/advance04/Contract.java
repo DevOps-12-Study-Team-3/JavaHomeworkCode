@@ -2,7 +2,7 @@ package chap99_homework.myself04.advance;
 
 public class Contract extends Worker {
 	
-	int workDay;
+	private int workDay;
 	
 	public Contract(int eno, String name, int pay, int type) {
 		super(eno, name, pay, type);
@@ -12,7 +12,7 @@ public class Contract extends Worker {
 	@Override
 	public double getMonthpay() {
 		// TODO Auto-generated method stub
-		return (double) this.pay * workDay;
+		return (double) super.getPay() * workDay;
 	}
 
 	@Override
