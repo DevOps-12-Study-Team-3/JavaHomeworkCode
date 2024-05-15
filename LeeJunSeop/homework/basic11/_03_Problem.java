@@ -9,6 +9,16 @@ public class _03_Problem {
 //	그리고 공유객체를 사용하며 numPrint1을 호출하는 스레드 클래스 1개와 
 //	numPrint2를 호출하는 스레드 클래스 1개를 구현하고 메인스레드에서 두 개의 스레드를 실행하세요.
 	public static void main(String[] args) {
+		NumberPrinter np = new NumberPrinter();
+		
+		NumThread1 numThread1 = new NumThread1();
+		NumThread2 numThread2 = new NumThread2();
+		
+		numThread1.setNumberPrinter(np);
+		numThread2.setNumberPrinter(np);
+		
+		numThread1.start();
+		numThread2.start();
 		
 	}
 }
