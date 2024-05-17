@@ -43,14 +43,15 @@ public class middle {
 			charList.add(sc.nextLine().charAt(0));
 		}
 		
-		charList.stream().map( c -> {
-			if(c >= 'a' && c <= 'z') {
-				return (char) (c-32);
-			}else {
-				return (char) (c+32);
-			}
-		}).forEach(c -> System.out.print(c));
+		charList.stream().map( c -> Character.isUpperCase(c) ? Character.toLowerCase(c) : Character.toUpperCase(c)).forEach(c -> System.out.println(c));
 		
+		
+//		if(c >= 'a' && c <= 'z') {
+//			return (char) (c-32);
+//		}else {
+//			return (char) (c+32);
+//		}
+			
 		sc.close();
 		
 	}
