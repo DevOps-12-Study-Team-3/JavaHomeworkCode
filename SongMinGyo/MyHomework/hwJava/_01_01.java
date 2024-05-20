@@ -2,7 +2,7 @@ package myhw.hwJava;
 
 import java.util.Scanner;
 
-public class _basic {
+public class _01_01 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
