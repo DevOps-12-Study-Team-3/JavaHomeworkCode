@@ -1,8 +1,8 @@
-package MyHomework.hwJava;
+package myhw.hwJava;
 
 import java.util.Scanner;
 
-public class _basic03 {
+public class _01_04 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
