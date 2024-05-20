@@ -238,12 +238,110 @@ public class _01_main {
 		
 		// ==========================================
 		
+		// [ 7번문제 ]
+		
+		/*
+		 	7. 두 개의 정수형 배열을 만들고 
+		 	1 ~ 100까지의 랜덤한 값으로 첫 번째 배열은 4개 두 번째 배열은 3개를 저장하고 
+		 	두 배열을 합친 새로운 배열을 생성하세요.
+		 */
 		
 		
+		int num_list7[] = new int[4] ; 
+		
+		for( int i = 0 ; i < num_list7.length ; i++ ) 
+		{
+			num_list7[ i ] = ( (int) (Math.random() * 100) ) + 1 ;
+		}
+		
+		int num_list8[] = new int[3] ;  	
+		
+		for( int i = 0 ; i < num_list8.length ; i++ ) 
+		{
+			num_list8[ i ] = ( (int) (Math.random() * 100) ) + 1 ;
+		}
+		
+        // 두 배열의 길이를 합친 길이의 새로운 배열 생성
+        int[] Integration_Array = new int[num_list7.length + num_list8.length];
+        
+        // 첫 번째 배열의 요소를 새로운 배열에 복사
+        for (int i = 0; i < num_list7.length; i++) 
+        {
+        	Integration_Array[i] = num_list7[i];
+        }
+        
+        // 두 번째 배열의 요소를 새로운 배열에 복사
+        for (int i = 0; i < num_list8.length; i++) 
+        {
+        	Integration_Array[num_list7.length + i] = num_list8[i];
+        }
+     
+        System.out.print( "결과 : " );
+        
+        for ( int num : Integration_Array ) 
+        {
+            System.out.print( num + " " );
+        }		
 		
 		
+		System.out.println( "\n====================================\n" );
 		
+		// ==========================================
 		
+		// [ 8번 문제 ]
+		
+		/*
+		 	8. 사용자가 문자열을 입력하는데 문자열 사이사이에 -을 넣어 구분자로 만들어준다. 
+		 	-기준으로 잘라진 문자열 배열을 생성하고 
+		 	잘라진 문자열 중에 가장 길이가 긴 문자열의 인덱스와 그 문자열을 출력하세요.
+		 */
+		
+		System.out.println( "문자열을 입력해주세요\n 문자열 사이 사이에 -을 넣어 구분하세요" );
+		
+		String User_Data1 = sc.nextLine() ;
+		
+	     // 입력된 문자열을 '-'을 기준으로 분리하여 배열에 저장
+        String String_split_list[] = User_Data1.split("-");	
+        
+        int max_len2 = 0 ;
+        
+        String max_str = " " ;
+        
+        int max_str_index = 0 ;
+		
+		for( int i = 0 ; i < String_split_list.length ; i++ )
+		{
+			if( i == 0 )
+			{
+				max_len2 = String_split_list[i].length() ;
+				
+				max_str = String_split_list[i] ;
+				
+				max_str_index = i ;
+			}
+			else
+			{
+				if ( max_len2 < String_split_list[i].length() )
+				{
+					max_len2 = String_split_list[i].length() ;
+					
+					max_str = String_split_list[i] ;
+					
+					max_str_index = i ;
+				}
+			}
+			
+			System.out.println( i + "번 데이터 : " + String_split_list[i] );
+
+		}
+
+		System.out.println( "가장 긴 문자열 : " + max_str );
+		System.out.println( "가장 긴 문자열의 인덱스 : " + max_str_index );
+		System.out.println( "가장 긴 문자열의 길이 : " + max_len2 );
+		
+		System.out.println( "\n====================================\n" );
+		
+		// ==========================================
 		
 		
 		
