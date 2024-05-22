@@ -78,21 +78,49 @@ public class _02_main {
 		 */
 		
 		
+		Radius radius = new Radius();
 		
+		System.out.println( "원의 넓이 : " + radius.Area( 5 ) );
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		System.out.println( "원의 둘레 : " + radius.Circumference(5));
+
 		System.out.println( "\n===========================\n" );
 		
 		// =================================================
+		
+		// [ 6번 문제 ]
+		
+		// 6. 잔액을 속성으로 가지고 입금, 출금, 잔액 조회를 메소드로 갖는 계좌 클래스를 생성하세요.
+		
+		
+		Account account = new Account(  );
+		
+		System.out.println( "입금 : " + account.Deposit( 5000 ) + "원을 입금하셨습니다." );
+		
+		System.out.println( "출금 : " + account.Withdrawal( 5000 ) + "원을 출금하셨습니다." );	
+		
+		System.out.println( "현재잔액 : " + account.Balance_check( ) + "원 입니다." );
+
+		System.out.println( "\n===========================\n" );
+		
+		// =================================================
+		
+		// [ 7번 문제 ]
+		
+		/*
+			7. Add라는 클래스를 만들고 
+			정수형 매개변수 2개를 받아서 합을 리턴하는 add 메소드를 구현하세요. 
+		    그리고 오버로딩을 통해 정수형 매개변수 세개를 받아서 
+		    각각의 제곱의 합을 리턴하는 add메소드도 구현하세요. 	 
+		 */
+		
+		Add add = new Add();
+		
+		System.out.println( "합 : " + add.sum( 3 , 4 ) );
+		
+		System.out.println( "제곱의 합 : " + add.sum( 3 , 4 , 5 ) );
+
+		System.out.println( "\n===========================\n" );
 		
 	}
 
@@ -108,8 +136,7 @@ public class _02_main {
 	{
 		return ( double ) num1 * num2 ;
 	}
-	
-	//[5번문제]
+
 	
 	
 	
