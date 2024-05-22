@@ -39,10 +39,23 @@ WHERE ( MAJOR = '화학' ) AND ( AVR  <= 2 ) ;
 
 --7) 화학과 정교수를 검색하라
 
+SELECT SECTION 
+	, ORDERS 
+FROM PROFESSOR p  
+WHERE ( SECTION = '화학' ) AND ( ORDERS = '정교수' ) ;
+
+
 
 --8) 물리학과 학생중에 성이 사마씨인 학생을 검색하라
 
+SELECT SNAME  
+	, MAJOR 
+FROM STUDENT s  
+WHERE SNAME LIKE  '%사마%'  AND ( MAJOR = '물리' ) ;
 
 --9) 성과 이름이 각각 1글자인 교수를 검색하라
 
-
+SELECT PNAME 
+	,ORDERS 
+FROM PROFESSOR p  
+WHERE PNAME LIKE '__' ;
