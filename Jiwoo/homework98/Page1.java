@@ -507,29 +507,168 @@ public class Page1 {
 		
 		
 //		9. 사용자가 입력한 세 정수가 모두 짝수인 경우 "모두 짝수입니다." 모두 홀수인 경우 "모두 홀수입니다." 그 외의 경우 "짝수 : xxx개, 홀수 : xxx개 입니다."를 출력하세요.
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("첫번째 정수를 입력하세요. ");
-        int a = scanner.nextInt(); 
-        System.out.println("두번째 정수를 입력하세요. ");
-        int b = scanner.nextInt(); 
-        System.out.println("세번째 정수를 입력하세요. ");
-        int c = scanner.nextInt(); 
+//		Scanner scanner = new Scanner(System.in);
+//		System.out.println("첫번째 정수를 입력하세요. ");
+//        int a = scanner.nextInt(); 
+//        System.out.println("두번째 정수를 입력하세요. ");
+//        int b = scanner.nextInt(); 
+//        System.out.println("세번째 정수를 입력하세요. ");
+//        int c = scanner.nextInt(); 
+//		
+//        int evenCount = 0;
+//        int oddCount = 0;
+//        
+//        if(a % 2 == 0) evenCount++; else oddCount++;
+//        if(b % 2 == 0) evenCount++; else oddCount++;
+//        if(c % 2 == 0) evenCount++; else oddCount++;
+//        
+//        if (evenCount == 3) {
+//            System.out.println("모두 짝수입니다.");
+//        } else if (oddCount == 3) {
+//            System.out.println("모두 홀수입니다.");
+//        } else {
+//            System.out.println("짝수 : " + evenCount + "개, 홀수 : " + oddCount + "개 입니다.");
+//        }
+//		
+//        1. 1부터 10까지의 정수의 합을 출력하세요.
+//			int sum = 0;
+//			for(int i = 0; i <=10; i++) {
+//				sum += i;
+//			} System.out.println(sum);
 		
-        int evenCount = 0;
-        int oddCount = 0;
-        
-        if(a % 2 == 0) evenCount++; else oddCount++;
-        if(b % 2 == 0) evenCount++; else oddCount++;
-        if(c % 2 == 0) evenCount++; else oddCount++;
-        
-        if (evenCount == 3) {
-            System.out.println("모두 짝수입니다.");
-        } else if (oddCount == 3) {
-            System.out.println("모두 홀수입니다.");
-        } else {
-            System.out.println("짝수 : " + evenCount + "개, 홀수 : " + oddCount + "개 입니다.");
-        }
+//
+//        2. 2의 거듭제곱을 10회동안 반복하며 출력하세요.(2 * 2 = 4, 2 * 2 * 2 = 8 .....) 10회 반복 출력
+//
+//			int sum = 1;
+//			int i = 0;
+//			while(i<10) {
+//				sum *= 2;
+//				i++;
+//				System.out.println(sum);
+//			}
+		
+//        3. 사용자가 입력한 정수까지의 모든 소수를 출력하세요.
+//			Scanner scanner = new Scanner(System.in);
+//			System.out.println("정수를 입력하세요.");
+//			int a = scanner.nextInt();
+//			
+//			for(int i = 0; i <= a; i++)
+//			if(i%i == 1) {
+//				System.out.println(i);
+//				break;
+//			}
+//		
+		
+//
+//        4. 사용자가 입력한 정수의 약수를  출력하세요.
+//			Scanner scanner = new Scanner(System.in);
+//			System.out.println("정수를 입력하세요.");
+//			int a = scanner.nextInt();
+//		
+//			for(int i = 1; i <= a; i++)
+//				if(a%i == 0) {
+//					System.out.println(i);
+//					
+//				}
+//
+//        5. 사용자가 입력한 10개의 정수를 역순으로 출력하세요.(배열 사용)
+//			Scanner scanner = new Scanner(System.in);
+//			int[] numArr = new int[10];
+//			for(int i = 0; i < numArr.length; i++) 
+//			{
+//				System.out.println("정수를 입력하세요.");
+//				numArr[i] = scanner.nextInt(); 
+//				
+//			}
+//						마지막인덱스 -1
+//			for(int i = numArr.length-1; i >= 0; i--) 
+//			{
+//				System.out.println(numArr[i]);
+//			}
+	
+		
+//
+//        6. 사용자가 입력한 문자열을 역순으로 출력하세요.
+//			Scanner scanner = new Scanner(System.in);
+//			System.out.println("문자열을 입력하세요");
+//			
+//			String input = scanner.nextLine();
+//			String reversed = "";
+//			char[] strArr = input.toCharArray();
+//			
+//			for(int i = strArr.length -1; i >= 0; i--) {
+//				reversed += input.charAt(i);
+//			}
+//			System.out.println(reversed);
+//		
 		
 		
+//
+//        7. 사용자가 입력한 두 정수의 최소공배수와 최대공약수를 출력하세요.
+//
+//			Scanner scanner = new Scanner(System.in);
+//			
+//			System.out.println("정수를 입력하세요");
+//			int a = scanner.nextInt();
+//			
+//			scanner.nextLine();
+//			
+//			System.out.println("정수를 입력하세요");
+//			
+//			int b = scanner.nextInt();
+//			
+//			int min = (a < b) ? a : b;
+//			int gcd = 1;
+//			for(int i = 1; i <= min; i++)
+//				if(a%i == 0 && b%i == 0) {
+//					gcd =i;
+//				}
+//			int lcm = ( a * b ) / gcd;
+//			
+//	
+//			System.out.println("최소 공배수" + lcm);
+//			System.out.println("최대 공약수" + gcd);
+		
+		
+		
+//        8. 중첩 for문으로 이용해서 다음과 같이 출력하세요.
+//
+		
+		
+		
+//		for(int i = 0; i < 5; i++) {
+//			for(int j = 0; j < 5; j++ ) {
+//				if(i >= j) {
+//					System.out.print("*");
+//				}
+//			}
+//			System.out.println();
+//		}
+		
+		
+//        8-1. *
+//             **
+//             ***
+//             ****
+//             *****
+//
+		for(int i = 0; i < 5; i++) {
+			for(int j = 0; j <5; j++) {
+				if(i <= j) {
+					System.out.print("*");
+				} else {
+					System.out.print(" ");
+				}
+			}
+			System.out.println();
+		}
+		
+//        8-2. *****
+//              ****
+//               ***
+//                **
+//                 *
+//
+//        9. 사용자가 q를 입력하기 전까지 계속 반복하면서 입력한 정수의 값을 더해서 출력하세요.
 	}
 }
