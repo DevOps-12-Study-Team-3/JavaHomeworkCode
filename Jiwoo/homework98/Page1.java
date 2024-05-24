@@ -652,16 +652,16 @@ public class Page1 {
 //             ****
 //             *****
 //
-		for(int i = 0; i < 5; i++) {
-			for(int j = 0; j <5; j++) {
-				if(i <= j) {
-					System.out.print("*");
-				} else {
-					System.out.print(" ");
-				}
-			}
-			System.out.println();
-		}
+//		for(int i = 0; i < 5; i++) {
+//			for(int j = 0; j <5; j++) {
+//				if(i <= j) {
+//					System.out.print("*");
+//				} else {
+//					System.out.print(" ");
+//				}
+//			}
+//			System.out.println();
+//		}
 		
 //        8-2. *****
 //              ****
@@ -670,5 +670,32 @@ public class Page1 {
 //                 *
 //
 //        9. 사용자가 q를 입력하기 전까지 계속 반복하면서 입력한 정수의 값을 더해서 출력하세요.
+		Scanner scanner = new Scanner(System.in);
+        
+        int sum = 0;
+        
+        while (true) {
+            System.out.println("정수를 입력하세요.(q를 입력시 종료)");
+            			// 입력값에 대해서 정수인지 판단
+            if (scanner.hasNextInt()) { // 입력이 정수인 경우
+                int userNum = scanner.nextInt();
+                sum += userNum;
+            } else {
+                String input = scanner.next(); // 다음 토큰을 문자열로 읽음
+                if (input.equals("q")) { // 입력이 "q"인 경우
+                    System.out.println("프로그램을 종료합니다.");
+                    break;
+                } else {
+                    System.out.println("유효한 정수를 입력하세요."); // 정수가 아닌 입력에 대한 처리
+                }
+            }
+        }
+        
+        System.out.println("합은 " + sum);
+        scanner.close();
+		
+		
+		
+		
 	}
 }
