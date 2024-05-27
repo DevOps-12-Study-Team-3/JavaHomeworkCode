@@ -2,7 +2,7 @@ package chap00_practice;
 
 import java.util.Scanner;
 
-public class _01_statement {
+public class _01_Statement {
 	public static void main(String[] args) {
 //		1. 사용자가 입력한 두 정수 중에서 큰 정수를 출력하세요.
 		Scanner sc = new Scanner(System.in);
