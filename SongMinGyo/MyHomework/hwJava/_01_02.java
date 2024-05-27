@@ -13,7 +13,8 @@ public class _01_02 {
 		String n1 = sc.nextLine();
 		String n2 = sc.nextLine();
 		
-//		int sum = (int)(n1 + n2);
+		String n1 = (int) n11;
+		int sum = (int)(n1 + n2);
 		
 		System.out.println("--------------------");
 		
