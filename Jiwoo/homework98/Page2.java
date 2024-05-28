@@ -1,11 +1,18 @@
 package chap99_homework.homework98;
 
+<<<<<<< HEAD
+=======
+import java.util.ArrayList;
+import java.util.Scanner;
+
+>>>>>>> 96ef301bc07759b932fa90ee526f7b102c8ce60c
 public class Page2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 //		--------------------배열--------------------
 //		1. 1부터 10까지의 정수를 배열에 저장하고 배열의 모든 요소를 출력하세요.
+<<<<<<< HEAD
 		int[] intArr = new int[10];
 		for(int i = 0; i < intArr.length; i++) {
 			intArr[i] = i + 1;
@@ -16,6 +23,82 @@ public class Page2 {
 		
 		
 //		2. 사용자가 q를 입력하기 전까지 정수를 입력받아 배열에 저장하고 배열의 모든 요소를 출력하세요.
+=======
+//		int[] intArr = new int[10];
+//		for(int i = 0; i < intArr.length; i++) {
+//			intArr[i] = i + 1;
+//
+//			System.out.println(intArr[i]);
+//		}
+
+
+
+//		2. 사용자가 q를 입력하기 전까지 정수를 입력받아 배열에 저장하고 배열의 모든 요소를 출력하세요.
+		
+		        Scanner sc = new Scanner(System.in);
+		        ArrayList<Integer> arrList = new ArrayList<>();
+//		        제네릭 클래스 ArrayList<>는 객체 타입만을 허용합니다. 기본 타입인 int는 객체가 아니므로 ArrayList<int>는 사용할 수 없습니다. 
+//		        대신, 기본 타입 int의 래퍼 클래스인 Integer를 사용해야 합니다.
+//		        
+//		        배열의 크기를 미리 정할 수 없으므로 동적으로 크기를 조정할 수 있는 ArrayList를 사용합니다.
+//		        int[] arr = new int[2]; // 초기 배열 크기를 작게 설정
+//		        int size = 0;
+//
+//		        while (true) {
+//		            System.out.println("정수를 입력하세요 (q를 입력시 종료):");
+//
+//		            if (sc.hasNextInt()) {
+//		                int userNum = sc.nextInt();
+//
+//		                // 배열이 꽉 찼으면 크기를 두 배로 늘림
+//		                if (size == arr.length) {
+//		                    int[] newArr = new int[arr.length * 2];
+//		                    System.arraycopy(arr, 0, newArr, 0, arr.length);
+//		                    arr = newArr;
+//		                }
+//
+//		                arr[size++] = userNum;
+//		            } else
+		        while (true) {
+		            System.out.println("정수를 입력하세요 (q를 입력시 종료):");
+//					
+		            // 입력이 정수인지 확인
+		            if (sc.hasNextInt()) {
+		                int userNum = sc.nextInt();
+		                //ArrayList의 끝에 추가됩니다.
+		                arrList.add(userNum);
+		            } else {
+		                String input = sc.next();
+		                // 값 비교 (두 문자열의 실제 값이 같은지 비교)
+		                //만약 ==를 사용하면, 두 문자열이 같은 객체인지(참조가 동일한지)를 비교하게 되어
+		                if (input.equals("q")) {
+		                    System.out.println("프로그램을 종료합니다.");
+		                    break;
+		                } else {
+		                    System.out.println("유효한 정수를 입력하세요.");
+		                }
+		            }
+		        }
+
+		        // 배열의 모든 요소를 출력
+		        System.out.println("입력된 정수:");
+//		        향상된 for 루프는 내부적으로 배열이나 컬렉션의 모든 요소에 대해 반복을 수행합니다.
+		        for (int num : arrList) {
+		            System.out.println(num);
+		        }
+//		        일반 for 루프를 사용하여 ArrayList의 모든 요소 출력
+		        System.out.println("입력된 정수:");
+		        for (int i = 0; i < arrList.size(); i++) {
+//		        	Integer 객체를 반환합니다. 그러나 int num 변수에 할당될 때, 자동 언박싱이 발생하여 
+//		        	Integer 객체가 기본 타입 int로 변환됩니다.
+		            int num = arrList.get(i);
+		            System.out.println(num);
+		        }
+		        sc.close();
+				}
+			
+		
+>>>>>>> 96ef301bc07759b932fa90ee526f7b102c8ce60c
 //
 //		3. 사용자가 입력한 10개의 정수를 배열에 저장하고 평균을 계산하여 출력하세요.
 //
@@ -79,7 +162,13 @@ public class Page2 {
 //		7. 현대차의 차종과 판매량을 저장하는 Map 한 개와 기아차의 차종과 판매량을 저장하는 Map 한 개를 만들어서
 //		    List에 둘 다 저장합니다. 회사별로 가장 판매량이 높은 차종의 Entry를 뽑아서 새로운 List에 저장하고 
 //		    출력하세요. (현대 차종은 아반떼, 소나타, 그랜저 기아 차종은, k5, k7, k9, 판매량은 마음대로 정하시면 됩니다.)
+<<<<<<< HEAD
 
 	}
 
 }
+=======
+	
+	}
+	
+>>>>>>> 96ef301bc07759b932fa90ee526f7b102c8ce60c
