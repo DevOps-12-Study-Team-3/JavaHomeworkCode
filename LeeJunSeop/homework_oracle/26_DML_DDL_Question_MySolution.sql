@@ -25,11 +25,12 @@ DELETE FROM PF_TEMP
 COMMIT;
 
 --5) EMP 테이블을 참조하여 EMP2 테이블을 만들고 DNO = 30인 사원의 보너스를 15프로 상승시킨 값으로 변경하시고 
+-- 	 DNO = 10인 사원의 보너스를 5프로 상승시킨 값으로 변경
 --   DNO = 20인 사원의 급여를 10프로 상승시킨 값으로 변경하세요.
 CREATE TABLE EMP2 AS SELECT * FROM EMP;
 UPDATE EMP2
 	SET EMP2.COMM = EMP2.COMM * 1.15
-	WHERE EMP2.DNO = '30';
+	WHERE (EMP2.DNO, EMP2.COMM)  IN (('30', EMP2.COMM), ('10', EMP2.COMM));
 UPDATE EMP2
 	SET EMP2.SAL = EMP2.SAL * 1.1
 	WHERE EMP2.DNO = '20';
