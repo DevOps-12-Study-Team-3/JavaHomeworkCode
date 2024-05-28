@@ -41,7 +41,7 @@ public class Main {
         {
             System.out.println( "짝수 입니다." );
             
-            // 약수구하기
+            // n까지의 짝수구하기
             for (int i = 2 ; i <= n ; i += 2) // n까지의 짝수
             {
                 answer += i * i;
@@ -51,7 +51,7 @@ public class Main {
         {
         	System.out.println( "홀수 입니다." );
         	
-            // 약수구하기
+            // n까지의 홀수 구하기
             for ( int i = 1; i <= n ; i += 2 )  // n까지 홀수
             {
                 answer += i;
