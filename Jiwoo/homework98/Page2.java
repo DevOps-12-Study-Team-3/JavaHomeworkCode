@@ -1,42 +1,30 @@
 package chap99_homework.homework98;
 
-<<<<<<< HEAD
-=======
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
->>>>>>> 96ef301bc07759b932fa90ee526f7b102c8ce60c
 public class Page2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 //		--------------------배열--------------------
 //		1. 1부터 10까지의 정수를 배열에 저장하고 배열의 모든 요소를 출력하세요.
-<<<<<<< HEAD
-		int[] intArr = new int[10];
-		for(int i = 0; i < intArr.length; i++) {
-			intArr[i] = i + 1;
-			
-			System.out.println(intArr[i]);
-		}
-		
-		
-		
-//		2. 사용자가 q를 입력하기 전까지 정수를 입력받아 배열에 저장하고 배열의 모든 요소를 출력하세요.
-=======
+//
 //		int[] intArr = new int[10];
 //		for(int i = 0; i < intArr.length; i++) {
 //			intArr[i] = i + 1;
-//
+//			
 //			System.out.println(intArr[i]);
 //		}
-
+		
+	
 
 
 //		2. 사용자가 q를 입력하기 전까지 정수를 입력받아 배열에 저장하고 배열의 모든 요소를 출력하세요.
-		
-		        Scanner sc = new Scanner(System.in);
-		        ArrayList<Integer> arrList = new ArrayList<>();
+//		
+//		        Scanner sc = new Scanner(System.in);
+//		        ArrayList<Integer> arrList = new ArrayList<>();
 //		        제네릭 클래스 ArrayList<>는 객체 타입만을 허용합니다. 기본 타입인 int는 객체가 아니므로 ArrayList<int>는 사용할 수 없습니다. 
 //		        대신, 기본 타입 int의 래퍼 클래스인 Integer를 사용해야 합니다.
 //		        
@@ -59,52 +47,115 @@ public class Page2 {
 //
 //		                arr[size++] = userNum;
 //		            } else
-		        while (true) {
-		            System.out.println("정수를 입력하세요 (q를 입력시 종료):");
-//					
-		            // 입력이 정수인지 확인
-		            if (sc.hasNextInt()) {
-		                int userNum = sc.nextInt();
-		                //ArrayList의 끝에 추가됩니다.
-		                arrList.add(userNum);
-		            } else {
-		                String input = sc.next();
-		                // 값 비교 (두 문자열의 실제 값이 같은지 비교)
-		                //만약 ==를 사용하면, 두 문자열이 같은 객체인지(참조가 동일한지)를 비교하게 되어
-		                if (input.equals("q")) {
-		                    System.out.println("프로그램을 종료합니다.");
-		                    break;
-		                } else {
-		                    System.out.println("유효한 정수를 입력하세요.");
-		                }
-		            }
-		        }
-
-		        // 배열의 모든 요소를 출력
-		        System.out.println("입력된 정수:");
-//		        향상된 for 루프는 내부적으로 배열이나 컬렉션의 모든 요소에 대해 반복을 수행합니다.
-		        for (int num : arrList) {
-		            System.out.println(num);
-		        }
-//		        일반 for 루프를 사용하여 ArrayList의 모든 요소 출력
-		        System.out.println("입력된 정수:");
-		        for (int i = 0; i < arrList.size(); i++) {
-//		        	Integer 객체를 반환합니다. 그러나 int num 변수에 할당될 때, 자동 언박싱이 발생하여 
-//		        	Integer 객체가 기본 타입 int로 변환됩니다.
-		            int num = arrList.get(i);
-		            System.out.println(num);
-		        }
-		        sc.close();
-				}
+//		        while (true) {
+//		            System.out.println("정수를 입력하세요 (q를 입력시 종료):");
+////					
+//		            // 입력이 정수인지 확인
+//		            if (sc.hasNextInt()) {
+//		                int userNum = sc.nextInt();
+//		                //ArrayList의 끝에 추가됩니다.
+//		                arrList.add(userNum);
+//		            } else {
+//		                String input = sc.next();
+//		                // 값 비교 (두 문자열의 실제 값이 같은지 비교)
+//		                //만약 ==를 사용하면, 두 문자열이 같은 객체인지(참조가 동일한지)를 비교하게 되어
+//		                if (input.equals("q")) {
+//		                    System.out.println("프로그램을 종료합니다.");
+//		                    break;
+//		                } else {
+//		                    System.out.println("유효한 정수를 입력하세요.");
+//		                }
+//		            }
+//		        }
+//
+//		        // 배열의 모든 요소를 출력
+//		        System.out.println("입력된 정수:");
+////		        향상된 for 루프는 내부적으로 배열이나 컬렉션의 모든 요소에 대해 반복을 수행합니다.
+//		        for (int num : arrList) {
+//		            System.out.println(num);
+//		        }
+////		        일반 for 루프를 사용하여 ArrayList의 모든 요소 출력
+//		        System.out.println("입력된 정수:");
+//		        for (int i = 0; i < arrList.size(); i++) {
+////		        	Integer 객체를 반환합니다. 그러나 int num 변수에 할당될 때, 자동 언박싱이 발생하여 
+////		        	Integer 객체가 기본 타입 int로 변환됩니다.
+//		            int num = arrList.get(i);
+//		            System.out.println(num);
+//		        }
+//		        sc.close();
+				
 			
 		
->>>>>>> 96ef301bc07759b932fa90ee526f7b102c8ce60c
+
 //
 //		3. 사용자가 입력한 10개의 정수를 배열에 저장하고 평균을 계산하여 출력하세요.
+//		Scanner sc = new Scanner(System.in);        
+//        int[] intArr1 = new int[10];
+//        int sum = 0;
+//
+//        System.out.println("10개의 정수를 입력하세요:");
+//
+//        for (int i = 0; i < 10; i++) {
+//            System.out.print((i + 1) + "번째 정수: ");
+//            intArr1[i] = sc.nextInt();
+//            sum += intArr1[i];
+//        }
+//
+//        double average = sum / 10.0;
+//
+//        System.out.println("입력한 정수들의 평균은: " + average);
+		        
+	
+	
 //
 //		4. 1부터 100까지의 숫자 중에서 짝수만 배열에 저장하고 배열의 합을 계산하여 출력하세요.
+//       Scanner sc = new Scanner(System.in);
+//       ArrayList<Integer> arrList = new ArrayList<>();
+//       int sum = 0;
+//       
+//       for(int i = 1; i <= 100; i++) {
+//    	   if(i % 2 == 0) {
+//    	     arrList.add(i);
+//    	     sum += i;
+//    	   }
+//       }
+//       System.out.println("1부터 100까지의 짝수 배열: " + arrList);
+//       System.out.println("1부터 100까지의 짝수의 합: " + sum);
+       
 //
 //		5. 사용자가 입력한 10개의 정수를 배열에 저장하고 최소값과 최대값을 찾아서 출력하세요.
+		Scanner sc = new Scanner(System.in);
+        int[] intArr = new int[10];
+
+        System.out.println("10개의 정수를 입력하세요:");
+
+        // 사용자로부터 10개의 정수를 입력받아 배열에 저장
+        for (int i = 0; i < 10; i++) {
+            System.out.print((i + 1) + "번째 정수: ");
+            intArr[i] = sc.nextInt();
+        }
+
+        // 배열의 첫 번째 값을 최소값 및 최대값으로 초기 설정
+        int min = intArr[0];
+        int max = intArr[0];
+
+        // 배열을 순회하면서 최소값과 최대값을 찾음
+        for (int i = 1; i < intArr.length; i++) {
+            if (intArr[i] < min) {
+                min = intArr[i];
+            }
+            if (intArr[i] > max) {
+                max = intArr[i];
+            }
+        }
+
+        // 최소값과 최대값 출력
+        System.out.println("입력한 정수들의 최소값: " + min);
+        System.out.println("입력한 정수들의 최대값: " + max);
+       
+       
+       
+       
 //
 //		6. 사용자가 입력한 5개의 문자열을 배열에 저장하고 길이가 가장 긴 문자열과 길이가 가장 작은 문자열을 출력하세요.
 //
@@ -162,13 +213,8 @@ public class Page2 {
 //		7. 현대차의 차종과 판매량을 저장하는 Map 한 개와 기아차의 차종과 판매량을 저장하는 Map 한 개를 만들어서
 //		    List에 둘 다 저장합니다. 회사별로 가장 판매량이 높은 차종의 Entry를 뽑아서 새로운 List에 저장하고 
 //		    출력하세요. (현대 차종은 아반떼, 소나타, 그랜저 기아 차종은, k5, k7, k9, 판매량은 마음대로 정하시면 됩니다.)
-<<<<<<< HEAD
 
+	
 	}
-
+	
 }
-=======
-	
-	}
-	
->>>>>>> 96ef301bc07759b932fa90ee526f7b102c8ce60c
