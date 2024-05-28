@@ -47,9 +47,7 @@ void input() {
     }
 }
 
-// 스도쿠의 정합 체크
-// 체크의 방식을 생각하면 체크는 현재의 백트래킹 깊이 n과 어떤 수를 넣는지에 대한 숫자 i에 따라, 그리고 그에 의해서만 달라지는 메소드
-// -> 변수는 n, i  리턴은 bool
+// 스도쿠의 정합 체크, 변수는 현재 실행중인 열 
 bool check(int n, int i) {
     for (int j = 0; j < 9; j++) {
         if (sdoku[blank[n].x][j] == i || sdoku[j][blank[n].y] == i) return false;
@@ -67,7 +65,7 @@ bool check(int n, int i) {
     return true;
 }
 
-// 백트래킹은 "각 깊이"에 따라 달라지는 메소드이므로 변수는 깊이 n, 리턴은 void
+// 백트래킹 
 void backtracking(int n) {
     if (is_end == true) {
         return;

@@ -31,12 +31,8 @@ void input() {
 
 void right_biggernumber() {
 	stack<int> stack;
-	
-	// 기본 아이디어는 스택에 수열을 집어 넣으면서 top보다 큰 수가 오면 push하기 전에 top을 pop하고 이후 push하는 방식
-	// 문제는 pop될 때의 인덱스 추적
-	// 이를 위해 스택에 수열의 "인덱스"를 저장하고 pop 될 때 해당 인덱스의 오큰수를 저장할 수 있음
 	stack.push(0);
-	for(int i = 1 ; i < N ; i++){
+	for (int i = 1; i < N; i++) {
 		while (!stack.empty() && s[i] > s[stack.top()]) {
 			nge[stack.top()] = s[i];
 			stack.pop();
@@ -54,8 +50,8 @@ int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 
-	FILE* filestream;
-	freopen_s(&filestream, "input.txt", "r", stdin);
+	//FILE* filestream;
+	//freopen_s(&filestream, "input.txt", "r", stdin);
 
 	input();
 
