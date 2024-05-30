@@ -69,12 +69,12 @@ SELECT AVR3.SNO
 --   갖는 가상테이블 하나를 생성하여 기말고사 성적이 90이상인 과목번호, 과목명, 학생번호, 학생이름, 교수번호, 교수이름, 기말고사성적을 조회하세요.
 WITH 
 	OLDBOY AS (
-		SELECT P.PNO, P.HIREDATE
-		FROM PROFESSOR P
-		WHERE MONTHS_BETWEEN(TRUNC(SYSDATE, 'DD'), (TRUNC(P.HIREDATE, 'DD')))/12 >= 25
+		SELECT *
+		FROM PROFESSOR 
+		WHERE MONTHS_BETWEEN(SYSDATE, HIREDATE)/12 >= 25
 	),
 	COU AS (
-		SELECT C.CNO, C.CNAME, S.SNO, S.SNAME, P.PNO, SC.RESULT
+		SELECT C.CNO, C.CNAME, S.SNO, S.SNAME, C.PNO, SC.RESULT
 		FROM COURSE C
 		JOIN SCORE SC
 		  ON C.CNO = SC.CNO
@@ -83,11 +83,36 @@ WITH
 		JOIN PROFESSOR P
 		  ON P.PNO = C.PNO
 	)
-	SELECT OLDBOY.PNO, COU.CNO, COU.CNAME, COU.SNO, COU.SNAME, COU.PNO, COU.RESULT
-	FROM OLDBOY
-	JOIN COU
+	SELECT OLDBOY.PNO, COU.CNO, COU.CNAME, COU.SNO, COU.SNAME, OLDBOY.PNAME, COU.RESULT
+	FROM COU
+	LEFT JOIN OLDBOY
 	ON OLDBOY.PNO = COU.PNO
 	WHERE COU.RESULT >= 90
+	
+WITH
+HIREOVER AS (SELECT * FROM PROFESSOR WHERE MONTHS_BETWEEN(SYSDATE, HIREDATE) / 12 >= 25),
+COUSTPF AS (
+                    SELECT CNO
+                         , C.CNAME
+                         , SNO
+                         , ST.SNAME
+                         , C.PNO
+                         , SC.RESULT
+                        FROM SCORE SC 
+                        NATURAL JOIN COURSE C
+                        NATURAL JOIN STUDENT ST
+                )
+SELECT COUSTPF.CNO
+     , COUSTPF.CNAME
+     , COUSTPF.SNO
+     , COUSTPF.SNAME
+     , HIREOVER.PNO
+     , HIREOVER.PNAME
+     , COUSTPF.RESULT
+    FROM COUSTPF
+    LEFT JOIN HIREOVER
+    ON COUSTPF.PNO = HIREOVER.PNO
+    WHERE COUSTPF.RESULT >= 90;
 	   
 	   
 --1) STUDENT 테이블을 참조하여 ST_TEMP 테이블을 만들고 모든 학생의 성적을 4.5만점 기준으로 수정하세요
