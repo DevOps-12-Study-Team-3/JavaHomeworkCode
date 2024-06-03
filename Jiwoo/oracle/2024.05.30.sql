@@ -118,3 +118,21 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('교수이름: ' || REC.PNAME);
 END;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
