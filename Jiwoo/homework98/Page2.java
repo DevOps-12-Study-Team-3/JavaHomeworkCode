@@ -2,7 +2,11 @@ package chap99_homework.homework98;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
+
+import static chap99_homework.homework98.ReturnClass.retuString;
+import static chap99_homework.homework98.ReturnInt.IntMul;
 
 public class Page2 {
 
@@ -124,59 +128,187 @@ public class Page2 {
        
 //
 //		5. 사용자가 입력한 10개의 정수를 배열에 저장하고 최소값과 최대값을 찾아서 출력하세요.
-		Scanner sc = new Scanner(System.in);
-        int[] intArr = new int[10];
-
-        System.out.println("10개의 정수를 입력하세요:");
-
-        // 사용자로부터 10개의 정수를 입력받아 배열에 저장
-        for (int i = 0; i < 10; i++) {
-            System.out.print((i + 1) + "번째 정수: ");
-            intArr[i] = sc.nextInt();
-        }
-
-        // 배열의 첫 번째 값을 최소값 및 최대값으로 초기 설정
-        int min = intArr[0];
-        int max = intArr[0];
-
-        // 배열을 순회하면서 최소값과 최대값을 찾음
-        for (int i = 1; i < intArr.length; i++) {
-            if (intArr[i] < min) {
-                min = intArr[i];
-            }
-            if (intArr[i] > max) {
-                max = intArr[i];
-            }
-        }
-
-        // 최소값과 최대값 출력
-        System.out.println("입력한 정수들의 최소값: " + min);
-        System.out.println("입력한 정수들의 최대값: " + max);
-       
-       
+//		  Scanner sc = new Scanner(System.in);
+//        int[] intArr = new int[10];
+//
+//        System.out.println("10개의 정수를 입력하세요:");
+//
+//        // 사용자로부터 10개의 정수를 입력받아 배열에 저장
+//        for (int i = 0; i < 10; i++) {
+//            System.out.print((i + 1) + "번째 정수: ");
+//            intArr[i] = sc.nextInt();
+//        }
+//
+//        // 배열의 첫 번째 값을 최소값 및 최대값으로 초기 설정
+//        int min = intArr[0];
+//        int max = intArr[0];
+//
+//        // 배열을 순회하면서 최소값과 최대값을 찾음
+//        for (int i = 1; i < intArr.length; i++) {
+//            if (intArr[i] < min) {
+//                min = intArr[i];
+//            }
+//            if (intArr[i] > max) {
+//                max = intArr[i];
+//            }
+//        }
+//
+//        // 최소값과 최대값 출력
+//        System.out.println("입력한 정수들의 최소값: " + min);
+//        System.out.println("입력한 정수들의 최대값: " + max);
        
        
 //
 //		6. 사용자가 입력한 5개의 문자열을 배열에 저장하고 길이가 가장 긴 문자열과 길이가 가장 작은 문자열을 출력하세요.
 //
-//		7. 두 개의 정수형 배열을 만들고 1 ~ 100까지의 랜덤한 값으로 첫 번째 배열은 4개 두 번째 배열은 3개를 저장하고 두 배열을 합친 새로운 배열을 생성하세요.
-//
-//		8. 사용자가 문자열을 입력하는데 문자열 사이사이에 -을 넣어 구분자로 만들어준다. -기준으로 잘라진 문자열 배열을 생성하고 잘라진 문자열 중에
+//        Scanner sc = new Scanner(System.in);
+//        String[] arrStr = new String[5];
+//        
+//        System.out.println("5개의 문자열을 입력하세요.");
+//        for(int i = 0; i < 5; i++){
+//        	arrStr[i] = sc.nextLine();        
+//        }
+//        int minLength = arrStr[0].length();
+//        int maxLength = arrStr[0].length();
+//        String min = arrStr[0];
+//        String max = arrStr[0];
+//        
+//        for(int i = 1; i < arrStr.length; i++){
+//        	if (arrStr[i].length() < minLength) {
+//        		minLength = arrStr[i].length();
+//        		min = arrStr[i];
+//        	}
+//        	
+//        	if (arrStr[i].length() > maxLength) {
+//        		maxLength = arrStr[i].length();
+//        		max = arrStr[i];
+//        	}
+//        }
+//        
+//        
+//        System.out.println("길이가 작은 문자열은:" + min);
+//        System.out.println("길이가 긴 문자열은:" + max);
+        
+        
+        
+//		7. 두 개의 정수형 배열을 만들고 1 ~ 100까지의 랜덤한 값으로 
+//        첫 번째 배열은 4개 두 번째 배열은 3개를 저장하고 두 배열을 합친 
+//        새로운 배열을 생성하세요.
+//        int[] intArr1; 
+//        int[] intArr2;		
+//        
+//        intArr1 = new int[4];
+//        intArr2 = new int[3];
+//        
+//        for(int i = 0; i < intArr1.length; i++) {
+//        	intArr1[i] = (int) (Math.random() * 100) + 1;
+//        	System.out.println(intArr1[i] + " ");
+//        }
+//        System.out.println("--------------------");
+//        for(int i = 0; i < intArr2.length; i++) {
+//        	intArr2[i] = (int) (Math.random() * 100) + 1;
+//        	System.out.println(intArr2[i] + " ");
+//        }
+////        System.out.println(intArr1);
+////        System.out.println(intArr2);
+////        System.out.println(Arrays.toString(intArr1));
+////        System.out.println(Arrays.toString(intArr2));
+//        int[] combinedArr = new int[intArr1.length + intArr2.length];
+//        
+//        // 첫 번째 배열의 요소를 새로운 배열에 복사
+//        int index = 0;
+//        for(int i = 0; i < intArr1.length; i++) {
+//            combinedArr[index++] = intArr1[i];
+//        }
+//        
+//        // 두 번째 배열의 요소를 새로운 배열에 복사
+//        for(int i = 0; i < intArr2.length; i++) {
+//            combinedArr[index++] = intArr2[i];
+//        }
+//        
+//        // 합친 배열 출력
+//        for(int num : combinedArr) {
+//            System.out.print(num + " ");
+//        
+//        }
+        
+//		8. 사용자가 문자열을 입력하는데 문자열 사이사이에 -을 넣어 구분자로 만들어준다. 
+//        -기준으로 잘라진 문자열 배열을 생성하고 잘라진 문자열 중에
 //		    가장 길이가 긴 문자열의 인덱스와 그 문자열을 출력하세요.
-//
+//        Scanner sc = new Scanner(System.in);
+//        
+//        // 사용자로부터 문자열 입력받기
+//        System.out.println("문자열을 입력하세요 (구분자는 - 입니다):");
+//        String userStr = sc.nextLine();
+//        
+//        // 입력받은 문자열을 '-'로 분할하여 배열 생성
+//        String[] strArr = userStr.split("-");
+//        
+//        // 가장 긴 문자열과 그 인덱스를 저장할 변수 초기화
+//        int maxLengthIndex = 0;
+//        String maxLengthStr = strArr[0];
+//        
+//        // 배열을 순회하면서 가장 긴 문자열 찾기
+//        for (int i = 1; i < strArr.length; i++) {
+//            if (strArr[i].length() > maxLengthStr.length()) {
+//                maxLengthIndex = i;
+//                maxLengthStr = strArr[i];
+//            }
+//        }
+//        
+//        // 결과 출력
+//        System.out.println("가장 긴 문자열의 인덱스: " + maxLengthIndex);
+//        System.out.println("가장 긴 문자열: " + maxLengthStr);
+//        
+//        sc.close();
+        
+		
 //
 //		--------------------클래스--------------------
 //		1. 학생의 이름, 학번, 학과를 속성으로 가지고 학생의 정보를 저장하는 메소드와 학생의 정보를 출력하는 메소드를 갖는 학생 클래스를 생성하세요.
 //
+//		Student student = new Student("고기천", 92959, "컴공");
+//		student.printStudentInfo();
+
+		
 //		2. 도서의 제목, 저자, 출판사, 가격을 속성으로 가지고 정보를 저장하는 메소드와 정보를 출력하는 메소드를 갖는 도서 클래스를 생성하세요.
+//		Libary library = new Libary("고기천의 삶", "고기천", "고출판사", 500);
+//		library.printLibaryInfo();
+		
 //
 //		3. 두 문자열을 전달받아 합쳐진 새로운 문자열을 리턴하는 메소드를 구현하세요.
+//		String str1 = "gomahaera";
+//		String str2 = "마이 묵읐다";
+//		String result = retuString(str1,str2);
+//		System.out.println(result);
+		
+		
 //
 //		4. 정수 한 개와 실수 한 개를 전달받아 소수점 두자리까지만 가지는 곱의 결과를 리턴하는 메소드를 구현하세요.
-//
+//		int i = 5;
+//		double d = 3.1414;
+//		double IntMulResult	= IntMul(i,d);
+//		System.out.println(IntMulResult);
+
+
 //		5. 반지름을 속성으로 갖는 원클래스를 만들고 사용자가 입력한 반지름이 생성자를 통해 속성에 저장되며 원의 넓이와 둘레를 구해서 리턴하는 메소드를 각각 구현하세요.
+//		double radios = 5.0;
 //
+//		Circle circle = new Circle(radios);
+//
+//		System.out.println("원의 반지름" + radios);
+//		System.out.println("원의 넓이" + circle.getArea());
+//		System.out.println("원의 둘레" + circle.getPerimeter());
+
+
+
 //		6. 잔액을 속성으로 가지고 입금, 출금, 잔액 조회를 메소드로 갖는 계좌 클래스를 생성하세요.
+
+
+
+
+
+
 //
 //		7. Add라는 클래스를 만들고 정수형 매개변수 2개를 받아서 합을 리턴하는 add 메소드를 구현하세요. 
 //		    그리고 오버로딩을 통해 정수형 매개변수 세개를 받아서 각각의 제곱의 합을 리턴하는 add메소드도 구현하세요. 
